@@ -38,7 +38,7 @@ class Env:
         self._env = GameEnv(self.players)
         self.total_round = 0
         self.infoset = None
-        self.wild_mode = flags.wild_mode
+        self.wild_mode = getattr(flags, 'wild_mode', False)
 
     def reset(self, model, device, flags=None):
         self._env.reset()

@@ -5,10 +5,14 @@ parser = argparse.ArgumentParser(description='DouZero: PyTorch DouDizhu AI')
 # General Settings
 parser.add_argument('--xpid', default='AlphaDou',
                     help='Experiment id (default: AlphaDou)')
+parser.add_argument('--save_interval', default=30, type=int,
+                    help='Time interval (in minutes) at which to save the model')
 parser.add_argument('--save_interval_frames', default=1999999, type=int,
-                    help='Time interval (in minutes) at which to save the model')    
+                    help='Checkpoint interval in frames')
 parser.add_argument('--objective', default='adp', type=str, choices=['adp'],
                     help='Use ADP as reward (default: ADP)')
+parser.add_argument('--wild_mode', action='store_true',
+                    help='Enable laizi/wild card mode')
 
 # Training settings
 parser.add_argument('--actor_device_cpu', action='store_true',
