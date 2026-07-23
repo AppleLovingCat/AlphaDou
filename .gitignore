@@ -1,1 +1,5 @@
 .venv
+douzero/__pycache__
+douzero/dmc/__pycache__
+douzero/env/__pycache__
+douzero_checkpoints/*
