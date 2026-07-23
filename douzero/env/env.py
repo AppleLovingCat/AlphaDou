@@ -26,7 +26,7 @@ cards4sample.extend([17])
 class Env:
 
     def __init__(self, flags):
-        self.objective = flags.bjective
+        self.objective = flags.objective
 
         # Initialize players
         # We use three dummy player for the target position
